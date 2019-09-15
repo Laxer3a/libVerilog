@@ -17,7 +17,7 @@ typedef unsigned short	u16;
 typedef char            s8;
 typedef unsigned char	u8;
 
-void testSaturatedFunction() {
+void testFunctions() {
 	Vtest_lib_saturated* mod = new Vtest_lib_saturated();
 	s16 inputSV;
 	u16 inputUV;
@@ -45,6 +45,17 @@ void testSaturatedFunction() {
 
 		u16 C_UPos  = inputUV;
 		if (C_UPos  > 255) { C_UPos = 255; }
+		
+		s16 C_RoundT0M1 = inputSV;
+		if (C_RoundT0M1 & 1) {
+			if (C_RoundT0M1 != -1) {
+				if (C_RoundT0M1 > 0) {
+					C_RoundT0M1--;
+				} else {
+					C_RoundT0M1++;
+				}
+			}
+		}
 
 		if (C_range != outRange) {
 			printf("error %i\n", n);
@@ -53,6 +64,9 @@ void testSaturatedFunction() {
 			printf("error %i\n", n);
 		}
 		if (C_UPos  != outUPos ) {
+			printf("error %i\n", n);
+		}
+		if (C_RoundT0M1 != outRound) {
 			printf("error %i\n", n);
 		}
 	}
