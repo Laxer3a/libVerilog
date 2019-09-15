@@ -9,6 +9,8 @@ All this library will be about combinatorial logic for mathematic or related ope
 - Signed division by a power of 2.
 - Various rounding strategies.
 
+(Sources are HARD TAB 4. GitHub web display may not like it very much.)
+
 # Documentation
 - Each function is in a separate .v file because of ease of use with Verilator.
 - Each function is documented inside the .v file.
