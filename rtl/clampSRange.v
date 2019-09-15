@@ -28,4 +28,4 @@ module clampSRange
 	wire [OUTW-2:0] andStage = {WT{andV}};
 	
 	assign valueOut = { valueIn[INW-1], ((valueIn[OUTW-2:0]  & andStage) | orStage) };
-endmodule;
+endmodule

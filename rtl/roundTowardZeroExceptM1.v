@@ -21,4 +21,4 @@ module roundTowardZeroExceptM1
 
 	assign valueOut = valueIn + { {WM1{posV}} , isOdd };	// Add +1 if negative, -1 if positive for VALID numbers.
 
-endmodule;
+endmodule

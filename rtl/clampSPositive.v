@@ -23,4 +23,4 @@ module clampSPositive
 	wire overF					= |valueIn[INW-2:OUTW];
 	
 	assign valueOut = ( valueIn[OUTW-1:0] | {OUTW{overF}} ) & andStage;
-endmodule;
+endmodule

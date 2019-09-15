@@ -17,4 +17,4 @@ module clampUPositive
 	wire isNZero            = |valueIn[INW-1:OUTW];
 	wire [OUTW-1:0] orStage = {OUTW{isNZero}};
 	assign valueOut = valueIn[OUTW-1:0] | orStage;
-endmodule;
+endmodule
